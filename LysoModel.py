@@ -7,6 +7,7 @@ import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import scipy.io as sio
+from jupyter_dash import JupyterDash
 
 
 #Array export and creating
@@ -333,7 +334,8 @@ a = [False, False, False, False]
 
 tspan = np.arange(0, 1000, 1e-2)
 
-app = Dash(__name__)
+app = JupyterDash(__name__)
+
 app.layout = html.Div(children=[
     html.Label('Plot type:'),
     html.Div(children=[
@@ -560,7 +562,7 @@ app.title = 'Lysosome model'
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run_server(mode='inline', port=8053)
 
 
 
