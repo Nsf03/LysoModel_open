@@ -560,4 +560,4 @@ app.title = 'Lysosome model'
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8053)
+    app.run(host='0.0.0.0', port=8053, debug = False)
